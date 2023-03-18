@@ -48,5 +48,7 @@ function handleSubmit(event) {
       });
     // увеличиваем задержку для последующих итераций на enteredStep
     enteredDelay += enteredStep;
+    // обнуляем поля
+    event.target.reset();
   }
 }
