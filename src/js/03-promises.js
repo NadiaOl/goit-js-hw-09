@@ -31,8 +31,8 @@ function handleSubmit(event) {
     elements: { delay, step, amount }
   } = event.currentTarget;
   let enteredDelay = Number(delay.value);
-  let enteredStep = Number(step.value);
-  let enteredAmount = Number(amount.value);
+  const enteredStep = Number(step.value);
+  const enteredAmount = Number(amount.value);
 
   // запускаем цикл до тех пор пока кол-во запусков не станет равно enteredAmount
   for (let i = 1; i <= enteredAmount; i += 1) {
