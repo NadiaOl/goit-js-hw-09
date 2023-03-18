@@ -34,6 +34,11 @@ function handleSubmit(event) {
   const enteredStep = Number(step.value);
   const enteredAmount = Number(amount.value);
 
+  // запретим выбор значений меньше 0
+  if (enteredDelay < 0 || enteredStep < 0 || enteredAmount <= 0) {
+    return  Notify.failure(`Выберете значение больше 0`)
+  }
+
   // запускаем цикл до тех пор пока кол-во запусков не станет равно enteredAmount
   for (let i = 1; i <= enteredAmount; i += 1) {
 
