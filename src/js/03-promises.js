@@ -30,13 +30,13 @@ function handleSubmit(event) {
   const {
     elements: { delay, step, amount }
   } = event.currentTarget;
-  enteredDelay = Number(delay.value);
-  enteredStep = Number(step.value);
-  enteredAmount = Number(amount.value);
+  let enteredDelay = Number(delay.value);
+  let enteredStep = Number(step.value);
+  let enteredAmount = Number(amount.value);
 
   // запускаем цикл до тех пор пока кол-во запусков не станет равно enteredAmount
   for (let i = 1; i <= enteredAmount; i += 1) {
-    
+
 // при каждом запуске цикла вызываем функцию создания промиса
 // первая итерация с задержкой равной enteredDelay
     createPromise(i, enteredDelay)
